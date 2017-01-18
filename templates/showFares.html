@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for fare in fares %}
+<div class="media">
+    <h4>The best fare is: {{ fare.Fare }} </h4>
+    {% if fare.Airline=="AA" %}
+    <p><h4>Airline: American Airlines </h4></p>
+    {% endif %}
+    {% if fare.Airline=="DEL" %}
+    <p><h4>Airline: Delta </h4></p>
+    {% endif %}
+    {% if fare.Airline=="SW" %}
+    <p><h4>Airline: Southwest Airlines </h4></p>
+    {% endif %}
+
+</div >
+{% else %}
+<p>No fares found</p>
+{% endfor %}
+
+{% endblock %}

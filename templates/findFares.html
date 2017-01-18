@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('find_fares')}}">
+
+  <h4>Select source</h4>
+<select name="source" id="sortingCriteria">
+  <option name="1" id="1">Dallas</option>
+  <option name="2" id="2">Austin</option>
+  <option name="3" id="3">Boston</option>
+ </select>
+
+    <p><h4>Select destination</h4></p>
+<select name="destination" id="sortingCriteria">
+  <option name="1" id="1">Dallas</option>
+  <option name="2" id="2">Austin</option>
+  <option name="3" id="3">Boston</option>
+ </select>
+
+        <p><h4>Select date</h4></p>
+<select name="date" id="sortingCriteria">
+  <option name="1" id="1">8</option>
+  <option name="2" id="2">9</option>
+  <option name="3" id="3">12</option>
+ </select>
+
+   <button type="submit" class="btn btn-success">Find Fares</button>
+</form>
+
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('find_fares_starting')}}">
+
+  <h4>Select source</h4>
+<select name="source" id="sortingCriteria">
+  <option name="1" id="1">Dallas</option>
+  <option name="2" id="2">Austin</option>
+  <option name="3" id="3">Boston</option>
+ </select>
+
+        <p><h4>Select date</h4></p>
+<select name="date" id="sortingCriteria">
+  <option name="1" id="1">8</option>
+  <option name="2" id="2">9</option>
+  <option name="3" id="3">12</option>
+ </select>
+
+   <button type="submit" class="btn btn-success">Find Fares</button>
+</form>
+
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('find_fares_range')}}">
+
+  <h4>Select start date</h4>
+<select name="startDate" id="sortingCriteria">
+  <option name="1" id="1">8</option>
+  <option name="2" id="2">9</option>
+  <option name="3" id="3">10</option>
+    <option name="4" id="4">11</option>
+    <option name="5" id="5">12</option>
+ </select>
+
+        <p><h4>Select end date</h4></p>
+<select name="endDate" id="sortingCriteria">
+  <option name="1" id="1">8</option>
+  <option name="2" id="2">9</option>
+  <option name="3" id="3">10</option>
+    <option name="4" id="4">11</option>
+    <option name="5" id="5">12</option>
+ </select>
+
+   <button type="submit" class="btn btn-success">Find Fares</button>
+</form>
+{% endblock %}
