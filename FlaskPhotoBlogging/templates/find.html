@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('picbook.find_file')}}">
+
+  <div class="form-group">
+    <label for="word">Enter word</label>
+    <input type="text" name="word" id="word" class="form-control" maxlength="20"/>
+  </div>
+
+  <button type="submit" class="btn btn-success">Find Doc</button>
+</form>
+
+{% endblock %}

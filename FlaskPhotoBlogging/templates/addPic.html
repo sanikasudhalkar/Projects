@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('picbook.add_pic')}}">
+
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <input type="text" name="comment" id="comment" class="form-control" maxlength="400"/>
+  </div>
+
+
+  <div class="form-group">
+    <label for="pic">Pic</label>
+    <input type="file" name="pic" id="pic" class="form-control"/>
+  </div>
+
+  <div class="form-group hidden">
+    <label for="picUrl">Pic URL</label>
+    <input type="text" name="picUrl" id="picUrl" class="form-control"/>
+  </div>
+
+  <button type="submit" class="btn btn-success">Add Pic</button>
+</form>
+
+{% endblock %}
