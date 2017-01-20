@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results of Static Analysis</title>
+</head>
+<body>
+    <label id="results_label" for="results"> Results.. </label>
+    <div>
+        {% if output %}
+           <pre>{{ output }}</pre>
+    {% else %}
+       <b>PROCESSING....</b>
+    {% endif %}
+    </div>
+    {% if output %}
+
+    {% else %}
+        <textarea id="results" name="results" value = "calculating results..."/>
+    {% endif %}
+</body>
+</html>
+
+{% endblock %}
