@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PicBook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">Picbook</div>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="{{url_for("picbook.my_pics")}}">My Pics</a></li>
+        </ul>
+         <ul class="nav navbar-nav">
+          <li><a href="{{url_for("picbook.all_pics")}}">All Pics</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="{{url_for("picbook.add_pic")}}">Add Pic</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+    {{user}}
+  </body>
+</html>

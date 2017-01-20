@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+{% for pic in pics %}
+<div class="media">
+
+    <div class="media-left">
+       <img src="{{image.img}}">
+
+    </div>
+     <div class="media-body">
+     <h4>Time: {{time}}</h4>
+
+
+    </div>
+    <div class="media-body">
+     <h4>Text: {{pic.text}}</h4>
+
+
+    </div>
+
+
+</div>
+{% else %}
+<p>No pictures found</p>
+{% endfor %}
+
+{% endblock %}
