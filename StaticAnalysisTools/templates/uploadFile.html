@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('uploadSuccess')}}">
+
+
+  <div class="form-group">
+    <label for="file">Select the file to be analyzed <br>Only .c, .cpp and .py are supported at this time</label>
+    <input type="file" name="file" id="file" accept=".c, .cpp, .py" class="form-control"/>
+  </div>
+
+
+<div class="form-group">
+    <label>This application uses FlawFinder for C and CPP files and Pylint for python files</label>
+  </div>
+
+  <button type="submit" class="btn btn-success">Upload</button>
+</form>
+
+{% endblock %}
